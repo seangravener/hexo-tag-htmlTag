@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-htmltag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Insert arbitrary html tags (with attributes) in hexo content.",
   "main": "index.js",
   "scripts": {

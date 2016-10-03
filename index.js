@@ -2,10 +2,30 @@
  * @seangravener
  *
  * use:
- * {% htmlTag span class="highlight" %} ... {% endhtmlTag %}
+ * {% htmlTag span class="highlight text" %} ... {% endhtmlTag %}
  */
 
 'use strict';
+
+function isKeyValuePair(attr) {
+  return !!(attr.indexOf('=') >= 0);
+};
+
+function argsToAttrs(attrs) {
+  var attrString = '{key}="{values}"';
+
+  attrs.forEach(function(attr, index){
+    if (isKeyValuePair(attr)) {
+      var pair = attr.split('=');
+      
+      attrs[index] = attrString
+        .replace(/{key}/g, pair[0])
+        .replace(/{values}/g, pair[1]);
+    };
+  });
+
+  return attrs.join(' ');
+};
 
 hexo.extend.tag.register('htmlTag', function(args, body) {
   var tagName = args[0],
@@ -13,7 +33,7 @@ hexo.extend.tag.register('htmlTag', function(args, body) {
       attrs = '';
 
   args.shift();
-  attrs = args.join(' ');
+  attrs = argsToAttrs(args);
 
   return tag
     .replace(/{tagName}/g, tagName)
