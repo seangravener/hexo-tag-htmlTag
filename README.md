@@ -1,12 +1,24 @@
-# Hexo htmlTag
+# hexo-tag-htmltag
 
-Insert arbitrary html tags (with attributes) in hexo content.
+A Hexo tag for inserting arbitrary html tags (with attributes) into posts.
 
-Use:
+## Installation
 ```
-{% htmlTag span class="highlight" %} Something important {% endhtmlTag %}
-// -> <span class="highlight">Something important</span>
+npm install hexo-tag-htmltag --save
 ```
 
-## Todo
-	- Render markdown within tag
+## Use
+__Basic__
+```
+{% htmlTag span class="highlight text" %} Something important {% endhtmlTag %}
+// -> <span class="highlight text">Something important</span>
+```
+
+__Multiple Attributes__
+```
+{% htmlTag button type="button" required data-action="add" aria-controls="calc"%} Add 10 {% endhtmlTag %}
+// -> <button type="button" required data-action="add" aria-controls="calc">Add 10</button>
+```
+
+## License
+MIT
