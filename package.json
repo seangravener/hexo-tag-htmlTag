@@ -1,11 +1,8 @@
 {
   "name": "hexo-tag-htmltag",
-  "version": "1.0.1",
-  "description": "Insert arbitrary html tags (with attributes) in hexo content.",
+  "version": "1.0.2",
+  "description": "A Hexo tag for inserting arbitrary html tags (with attributes) into posts.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seangravener/hexo-tag-htmlTag.git"
@@ -14,7 +11,7 @@
     "hexo"
   ],
   "author": "Sean Gravener <sean@gravener.net> (https://twitter.com/seangravener)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/seangravener/hexo-tag-htmlTag/issues"
   },
