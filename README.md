@@ -16,8 +16,8 @@ __Basic__
 
 __Multiple Attributes__
 ```
-{% htmlTag button type="button" required data-action="add" aria-controls="calc"%} Add 10 {% endhtmlTag %}
-// -> <button type="button" required data-action="add" aria-controls="calc">Add 10</button>
+{% htmlTag button type="button" data-submit data-action="add" aria-controls="calc"%} Add 10 {% endhtmlTag %}
+// -> <button type="button" data-submit data-action="add" aria-controls="calc">Add 10</button>
 ```
 
 ## License

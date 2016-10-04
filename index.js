@@ -1,8 +1,16 @@
 /**
- * @seangravener
+ * Sean Gravener - @seangravener
+ * https://github.com/seangravener/hexo-tag-htmlTag
  *
- * use:
- * {% htmlTag span class="highlight text" %} ... {% endhtmlTag %}
+ * Use
+ * {% htmlTag span class="highlight text" %} 
+ *   Something important 
+ * {% endhtmlTag %}
+ * 
+ * Multiple Attributes
+ * {% htmlTag button type="button" data-submit data-action="add" %} 
+ *   Add 10 
+ * {% endhtmlTag %}
  */
 
 'use strict';

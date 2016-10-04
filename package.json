@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-htmltag",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Hexo tag for inserting arbitrary html tags (with attributes) into posts.",
   "main": "index.js",
   "repository": {
