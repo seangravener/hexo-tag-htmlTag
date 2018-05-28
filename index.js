@@ -3,17 +3,19 @@
  * https://github.com/seangravener/hexo-tag-htmlTag
  *
  * Use
- * {% htmlTag span class="highlight text" %} 
- *   Something important 
+ * {% htmlTag span class="highlight text" %}
+ *   Something important
  * {% endhtmlTag %}
- * 
+ *
  * Multiple Attributes
- * {% htmlTag button type="button" data-submit data-action="add" %} 
- *   Add 10 
+ * {% htmlTag button type="button" data-submit data-action="add" %}
+ *   Add 10
  * {% endhtmlTag %}
  */
 
 'use strict';
+
+var marked = require('marked');
 
 function isKeyValuePair(attr) {
   return !!(attr.indexOf('=') >= 0);
@@ -25,7 +27,7 @@ function argsToAttrs(attrs) {
   attrs.forEach(function(attr, index){
     if (isKeyValuePair(attr)) {
       var pair = attr.split('=');
-      
+
       attrs[index] = attrString
         .replace(/{key}/g, pair[0])
         .replace(/{values}/g, pair[1]);
@@ -37,6 +39,7 @@ function argsToAttrs(attrs) {
 
 hexo.extend.tag.register('htmlTag', function(args, body) {
   var tagName = args[0],
+      body = marked(body);
       tag = '<{tagName} {attrs}>{body}</{tagName}>',
       attrs = '';
 
