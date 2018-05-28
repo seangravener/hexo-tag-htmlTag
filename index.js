@@ -40,6 +40,7 @@ function argsToAttrs(attrs) {
 hexo.extend.tag.register('htmlTag', function(args, body) {
   var tagName = args[0],
       body = marked(body);
+      body = marked(body),
       tag = '<{tagName} {attrs}>{body}</{tagName}>',
       attrs = '';
 
