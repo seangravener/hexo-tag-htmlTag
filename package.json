@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/seangravener/hexo-tag-htmlTag/issues"
   },
-  "homepage": "https://github.com/seangravener/hexo-tag-htmlTag#readme"
+  "homepage": "https://github.com/seangravener/hexo-tag-htmlTag#readme",
+  "dependencies": {
+    "hexo-renderer-marked": "^0.3.0"
+  }
 }
